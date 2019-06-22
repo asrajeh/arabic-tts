@@ -25,10 +25,12 @@ TEXT2WAVE=`pwd`/festival/bin/text2wave
 FLITE=`pwd`/flite/bin/flite
 cd ..
 
+# generate speech sample
 $TEXT2WAVE -eval $VOICEDEF -eval "(voice_$FV_FULLVOICENAME)" input.txt -o $FV_VOICENAME-festvox.wav
 # change audio playback speed but not its pitch
 sox $FV_VOICENAME-flite.wav $FV_VOICENAME-festvox2.wav tempo 1.1
 
+# generate speech sample
 $FLITE -voice ./$FV_VOICENAME.flitevox input.txt $FV_VOICENAME-flite.wav
 # change audio playback speed but not its pitch
 sox $FV_VOICENAME-flite.wav $FV_VOICENAME-flite2.wav tempo 1.1
