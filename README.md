@@ -6,7 +6,7 @@ Note that training on high quality corpus like [SASSC](https://www.isca-speech.o
 ## Audio Samples
 ASC corpus: [Festvox sample1](https://github.com/asrajeh/arabic-tts/blob/master/samples/kacst_ar_asc-festvox.wav), [Festvox sample2](https://github.com/asrajeh/arabic-tts/blob/master/samples/kacst_ar_asc-festvox2.wav), [Flite sample1](https://github.com/asrajeh/arabic-tts/blob/master/samples/kacst_ar_asc-flite.wav) and [Flite sample2](https://github.com/asrajeh/arabic-tts/blob/master/samples/kacst_ar_asc-flite2.wav)
 
-SASSC corpus: [Festvox sample](https://github.com/asrajeh/arabic-tts/blob/master/samples/kacst_ar_sassc-festvox.wav), [Festvox sample](https://github.com/asrajeh/arabic-tts/blob/master/samples/kacst_ar_sassc-flite.wav)
+SASSC corpus: [Festvox sample](https://github.com/asrajeh/arabic-tts/blob/master/samples/kacst_ar_sassc-festvox.wav) and [Flite sample](https://github.com/asrajeh/arabic-tts/blob/master/samples/kacst_ar_sassc-flite.wav)
  
 ## On fresh Ubuntu 18
 ```
