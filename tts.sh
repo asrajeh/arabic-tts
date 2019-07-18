@@ -63,6 +63,17 @@ fi
 FLITE=`pwd`/tools/flite/bin/flite
 TEXT2WAVE=`pwd`/tools/festival/bin/text2wave
 
+if [ "$voice" == asc_flite ]; then
+  FV_VOICENAME=kacst_ar_asc
+  $FLITE -voice ./$FV_VOICENAME.flitevox $input $output
+fi
+
+if [ "$voice" == asc_festvox ]; then
+  FV_FULLVOICENAME=kacst_ar_asc_cg
+  VOICEDEF=`pwd`/tools/festival/lib/voices/ar/$FV_FULLVOICENAME/festvox/$FV_FULLVOICENAME.scm
+  $TEXT2WAVE -eval $VOICEDEF -eval "(voice_$FV_FULLVOICENAME)" $input -o $output
+fi
+
 if [ "$voice" == sassc_flite ]; then
   FV_VOICENAME=kacst_ar_sassc
   $FLITE -voice ./$FV_VOICENAME.flitevox $input $output
