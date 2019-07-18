@@ -23,6 +23,13 @@ cd arabic-tts
 ./install_asc_voice.sh
 ```
 
+## Run
+```
+./tts.sh -i input.txt -o output.wav -v asc_festvox
+./tts.sh -i 'السَّلَامُ عَلَيْكُمْ' -o output.wav -v asc_festvox
+./tts.sh -i 'السلام عليكم' -o output.wav -v sassc_festvox -d 1
+```
+
 ## Build from scratch
 ```
 ./build_asc_voice.sh
