@@ -50,7 +50,7 @@ for f in $WAV/*.wav; do sox "$f" `echo $f | sed 's/ /_/g'`; rm "$f"; done
 for f in $TXT/*.lab; do mv "$f" `echo $f | sed 's/ /_/g'`; done
 ./bin/get_wavs $WAV/*.wav
 ls $TXT/ | sed 's/\.lab//g' > data.1
-for f in $TXT/*.lab; do cat $f; echo; done | perl ../buckwalter.pl -d=2 | sed -E 's/^|$/"/g' > data.2
+for f in $TXT/*.lab; do cat $f; echo; done | sed 's/\^/v/g' | perl ../buckwalter.pl -d=2 | sed -E 's/^|$/"/g' > data.2
 paste -d' ' data.1 data.2 | sed 's/^/( /g; s/$/ )/g' > etc/txt.done.data
 rm data.1 data.2
 
